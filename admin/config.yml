@@ -1,0 +1,77 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# For local development
+local_backend: true
+
+media_folder: "static/images"
+public_folder: "/static/images"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "writing"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post.njk"}
+      - {label: "Tags", name: "tags", widget: "list", default: ["post"], hint: "First tag should always be 'post'"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "data"
+    label: "Site Data"
+    files:
+      - label: "Site Information"
+        name: "site"
+        file: "_data/site.json"
+        fields:
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "LinkedIn URL", name: "linkedin", widget: "string"}
+          - {label: "Location", name: "location", widget: "string"}
+          - {label: "Website URL", name: "url", widget: "string"}
+          - {label: "Bio", name: "bio", widget: "text"}
+      
+      - label: "Experience"
+        name: "experience"
+        file: "_data/experience.json"
+        fields:
+          - label: "Experience Items"
+            name: "experience"
+            widget: "list"
+            fields:
+              - {label: "Job Title", name: "title", widget: "string"}
+              - {label: "Company", name: "company", widget: "string"}
+              - {label: "Period", name: "period", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+      
+      - label: "Projects"
+        name: "projects"
+        file: "_data/projects.json"
+        fields:
+          - label: "Project Items"
+            name: "projects"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "URL", name: "url", widget: "string"}
+              - {label: "Type", name: "type", widget: "select", options: ["article", "presentation", "podcast", "video", "talk", "project"]}
+  
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "about.njk"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "framer-base.njk"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/about/"}
+          - {label: "Body", name: "body", widget: "markdown"}

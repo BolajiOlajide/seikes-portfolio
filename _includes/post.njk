@@ -1,0 +1,32 @@
+---
+layout: framer-base.njk
+---
+
+<article class="post">
+    <header class="post-header" style="margin-bottom: 32px;">
+        <div class="post-meta" style="margin-bottom: 16px;">
+            {{ date | date }} • {{ content | wordcount }} words
+        </div>
+        <h1 style="font-size: 36px; font-weight: 700; line-height: 1.2;">{{ title }}</h1>
+    </header>
+    
+    <div class="post-content" style="line-height: 1.7; font-size: 18px;">
+        {{ content | safe }}
+    </div>
+    
+    {% if tags and tags.length > 1 %}
+    <footer class="post-footer" style="margin-top: 48px; padding-top: 24px; border-top: 1px solid #eee;">
+        <div class="tags" style="display: flex; gap: 8px; flex-wrap: wrap;">
+            {% for tag in tags %}
+                {% if tag != "post" %}
+                <span style="background: #f5f5f5; padding: 4px 12px; border-radius: 16px; font-size: 14px; color: #666;">{{ tag }}</span>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </footer>
+    {% endif %}
+</article>
+
+<nav class="post-nav" style="margin-top: 64px; padding-top: 32px; border-top: 1px solid #eee;">
+    <a href="/writing/" style="text-decoration: none; color: #666; font-weight: 500;">← Back to Writing</a>
+</nav>

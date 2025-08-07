@@ -1,0 +1,35 @@
+---
+layout: framer-base.njk
+title: Writing
+permalink: /writing/
+---
+
+<section class="section">
+    <p style="text-align: center; color: var(--token-text-secondary); margin-bottom: 48px; font-size: 16px; margin-top: 48px;">
+        Thoughts on operations, customer success, and building great teams.
+    </p>
+    
+    <div class="ventures-grid">
+        {% for post in collections.posts %}
+        <a href="{{ post.url }}" class="venture-card">
+            <div class="venture-title">
+                {{ post.data.title }}
+                <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4.5 19.5L19.5 4.5M19.5 4.5L8.25 4.5M19.5 4.5V15.75"/>
+                </svg>
+            </div>
+            <div class="post-meta">{{ post.data.date | date }} • {{ post.templateContent | wordcount }} words</div>
+            <div class="venture-description">{{ post.templateContent | excerpt }}</div>
+            {% if post.data.tags and post.data.tags.length > 1 %}
+            <div class="post-tags">
+                {% for tag in post.data.tags %}
+                    {% if tag != "post" %}
+                    <span class="tag">{{ tag }}</span>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            {% endif %}
+        </a>
+        {% endfor %}
+    </div>
+</section>
