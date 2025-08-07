@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: BolajiOlajide/seikes-portfolio # Path to your GitHub repository
+  name: git-gateway
   branch: main
 
 media_folder: "static/images"
