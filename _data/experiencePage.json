@@ -1,0 +1,95 @@
+{
+  "subtitle": "A detailed look at my professional journey and the roles that shaped my expertise in operations, customer success, and team leadership.",
+  "jobs": [
+    {
+      "title": "Co-Founder & COO",
+      "company": "Mira",
+      "companyUrl": "https://usemira.com/",
+      "period": "2023 — 2025",
+      "description": "Co-founded Mira, a logistics startup that was later acquired by Chowdeck. As COO, I was responsible for People, Finance, and Customer Operations, building the backbone of the business from the ground up.",
+      "achievements": [
+        {
+          "item": "Built operational infrastructure from scratch that scaled to serve thousands of customers"
+        },
+        {
+          "item": "Established finance, HR, and customer operations teams and processes"
+        },
+        { "item": "Successfully navigated company acquisition by Chowdeck" },
+        {
+          "item": "Created scalable operational frameworks that were retained post-acquisition"
+        }
+      ],
+      "skills": [
+        { "skill": "Operations Strategy" },
+        { "skill": "Team Building" },
+        { "skill": "Financial Operations" },
+        { "skill": "Customer Operations" },
+        { "skill": "Startup Growth" }
+      ]
+    },
+    {
+      "title": "Disputes Operations Lead",
+      "company": "Paystack",
+      "companyUrl": "https://paystack.com",
+      "period": "2020 — 2023",
+      "description": "Led the dispute resolution team responsible for chargeback, fraud, and merchant engagement operations. Created team structures that improved efficiency and drove significant loss reduction.",
+      "achievements": [
+        { "item": "Reduced losses due to chargebacks and fraud by 88%" },
+        { "item": "Built and led a high-performing dispute resolution team" },
+        {
+          "item": "Defined processes for debits reconciliation with payment partners"
+        },
+        { "item": "Created team structure that improved efficiency and growth" }
+      ],
+      "skills": [
+        { "skill": "Risk Management" },
+        { "skill": "Fraud Prevention" },
+        { "skill": "Team Leadership" },
+        { "skill": "Process Optimization" },
+        { "skill": "Financial Operations" }
+      ]
+    },
+    {
+      "title": "Product Specialist (Account Management)",
+      "company": "Paystack",
+      "companyUrl": "https://paystack.com",
+      "period": "2017 — 2020",
+      "description": "Pioneer member of the Key accounts team at Paystack. Worked to define and identify key merchants and the appropriate level of engagement for different merchant categories.",
+      "achievements": [
+        { "item": "Pioneered the Key Accounts team at Paystack" },
+        { "item": "Defined merchant categorization and engagement strategies" },
+        { "item": "Built and maintained relationships with top key merchants" },
+        { "item": "Established frameworks for key account management" }
+      ],
+      "skills": [
+        { "skill": "Account Management" },
+        { "skill": "Relationship Building" },
+        { "skill": "Strategic Planning" },
+        { "skill": "Merchant Relations" },
+        { "skill": "Business Development" }
+      ]
+    },
+    {
+      "title": "Customer Success Expert",
+      "company": "Paystack",
+      "companyUrl": "https://paystack.com",
+      "period": "2016 — 2017",
+      "description": "First customer success team member at Paystack when the company was just starting. Tasked with turning Paystack's first clients into advocates and creating educational content.",
+      "achievements": [
+        { "item": "First customer success hire at Paystack" },
+        { "item": "Turned early clients into product advocates" },
+        { "item": "Created video content for user onboarding" },
+        {
+          "item": "Wrote comprehensive helpdesk articles explaining product features"
+        }
+      ],
+      "skills": [
+        { "skill": "Customer Success" },
+        { "skill": "Content Creation" },
+        { "skill": "User Onboarding" },
+        { "skill": "Documentation" },
+        { "skill": "Customer Advocacy" }
+      ]
+    }
+  ]
+}

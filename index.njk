@@ -7,7 +7,7 @@ title: Home
 <section class="intro-section">
     <div class="profile">
         <div class="profile-image">
-            <img src="https://framerusercontent.com/images/rG77FznwlEd68cq4KEVfvykYMw.png" alt="{{ site.name }}" class="profile-img">
+            <img src="{{ homepage.profileImage }}" alt="{{ site.name }}" class="profile-img">
             <div class="status-dot"></div>
         </div>
         <div class="profile-info">
@@ -15,15 +15,15 @@ title: Home
             <div class="profile-title">{{ site.title }}</div>
         </div>
     </div>
-    
+
     <div class="bio-content">
-        <p>{{ site.bio }} I've led high-performing teams, designed processes from scratch, and shaped product experiences that made life easier for internal teams, businesses and their customers.</p>
-        
-        <p>In 2023, I co-founded a company called Mira (acquired by Chowdeck), where I served as COO. I was responsible for People, Finance, and Customer Operations, and my mission was simple: build the backbone of the business. That meant setting up the right structure, finding the right tools, and supporting the right people.</p>
-        
-        <p>At the core of everything I do is this belief:</p>
-        
-        <p><strong>Customer Success is about creating meaningful human experiences.</strong><br>Because at the end of the day, every interaction; even the operational ones should feel simple, fast, and valuable for the people behind the business.</p>
+        <p>{{ site.bio }} {{ homepage.intro1 }}</p>
+
+        <p>{{ homepage.intro2 }}</p>
+
+        <p>{{ homepage.intro3 }}</p>
+
+        <p><strong>{{ homepage.beliefStatement }}</strong><br>{{ homepage.beliefDescription }}</p>
     </div>
 </section>
 
@@ -45,39 +45,28 @@ title: Home
     </div>
 </section>
 
-<!-- Area of Expertise Section -->
+<!-- Expertise Areas Section -->
 <section class="section">
     <h2>Area of expertise</h2>
-    <div class="expertise-header">
-        <div class="expertise-title">Team Structure & Enablement</div>
-        <div class="expertise-subtitle">People Development · Operational Clarity · Scalable Systems</div>
-    </div>
-    
-    {% for job in experience %}
-    <div class="experience-item">
-        <div class="experience-header">
-            <div class="experience-title">{{ job.title }}</div>
-            <div class="experience-at">at</div>
-            <div class="company-badge">{{ job.company }}</div>
-            <div class="experience-period">{{ job.period }}</div>
+    <div class="expertise-areas-grid">
+        {% for area in homepage.expertiseAreas %}
+        <div class="expertise-area-card">
+            <h3 class="expertise-area-title">{{ area.title }}</h3>
+            <p class="expertise-area-description">{{ area.description }}</p>
         </div>
-        <div class="experience-description">{{ job.description }}</div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </section>
 
 <!-- Personal Section -->
 <section class="section">
-    <h2>My hobbies and things i like to do</h2>
+    <h2>{{ homepage.personalTitle }}</h2>
     <div class="personal-content">
-        <p>My hobbies are almost not existent but I'm trying to change that. Here are few things I like:</p>
+        <p>{{ homepage.personalIntro }}</p>
         <ol>
-            <li>Playing dress up and looking good. I wear a wide range of style and colours but my style is comfort chic.</li>
-            <li>I like dancing…my favourite genre of music to dance to is Afro house music and maybe Afrobeat lol</li>
-            <li>I started learning how to DJ and frankly, i've not gone far lmao.. it's hard hard work.</li>
-            <li>I like taking pictures especially when my husband is taking them..</li>
-            <li>I like hanging out with my friends</li>
-            <li>I like listening to podcasts. My faves are Founders by David Senra, ISWIS by Jollz and FK, Loose talk by Osagie, AOT2, Steve dede, DOAC by Steven Bartlett and What now by Trevor Noah.</li>
+            {% for item in homepage.personalItems %}
+            <li>{{ item.item }}</li>
+            {% endfor %}
         </ol>
     </div>
 </section>

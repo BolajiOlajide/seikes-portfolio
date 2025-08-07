@@ -254,6 +254,34 @@
             margin-left: 12px;
         }
         
+        /* Expertise areas grid */
+        .expertise-areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 24px;
+        }
+        
+        .expertise-area-card {
+            background: var(--token-bg-secondary);
+            border-radius: 12px;
+            padding: 24px;
+        }
+        
+        .expertise-area-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--token-text-primary);
+        }
+        
+        .expertise-area-description {
+            color: var(--token-text-secondary);
+            line-height: 1.5;
+            font-size: 14px;
+            margin: 0;
+        }
+        
         /* Post metadata and tags */
         .post-meta {
             color: var(--token-text-secondary);
@@ -342,6 +370,125 @@
             font-size: 14px;
         }
         
+        /* Experience page styles */
+        .experience-timeline {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .timeline-item {
+            margin-bottom: 48px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid var(--token-border);
+        }
+        
+        .timeline-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+        
+        .job-info {
+            flex: 1;
+        }
+        
+        .job-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--token-text-primary);
+        }
+        
+        .company-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .company-name {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--token-text-secondary);
+        }
+        
+        .company-link {
+            color: var(--token-text-secondary);
+            text-decoration: none;
+            opacity: 0.6;
+            transition: opacity 0.2s ease;
+        }
+        
+        .company-link:hover {
+            opacity: 1;
+        }
+        
+        .job-period {
+            color: var(--token-text-secondary);
+            font-family: "JetBrains Mono", monospace;
+            font-size: 13px;
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+        }
+        
+        .job-description {
+            color: var(--token-text-secondary);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .job-description p {
+            margin-bottom: 12px;
+        }
+        
+        .job-description p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .job-achievements {
+            margin-bottom: 20px;
+        }
+        
+        .job-achievements h4 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--token-text-primary);
+        }
+        
+        .job-achievements ul {
+            margin: 0;
+            padding-left: 20px;
+            color: var(--token-text-secondary);
+            line-height: 1.6;
+        }
+        
+        .job-achievements li {
+            margin-bottom: 6px;
+        }
+        
+        .job-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .skill-tag {
+            background: var(--token-surface);
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+            color: var(--token-text-secondary);
+            font-weight: 500;
+        }
+        
         /* Personal section */
         .personal-content {
             max-width: 600px;
@@ -420,6 +567,24 @@
             .section {
                 margin-bottom: 60px;
             }
+            
+            .timeline-header {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .job-period {
+                align-self: flex-start;
+            }
+            
+            .job-skills {
+                gap: 6px;
+            }
+            
+            .expertise-areas-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
         }
     </style>
 </head>
@@ -428,6 +593,7 @@
         <header class="header">
             <nav class="navbar">
                 <a href="/" class="nav-link{% if page.url == '/' %} active{% endif %}">Home</a>
+                <a href="/experience/" class="nav-link{% if page.url == '/experience/' %} active{% endif %}">Experience</a>
                 <a href="/writing/" class="nav-link{% if page.url == '/writing/' %} active{% endif %}">Writing</a>
                 <a href="mailto:{{ site.email }}" class="nav-link">Contact</a>
             </nav>

@@ -1,0 +1,59 @@
+---
+layout: framer-base.njk
+title: Experience
+permalink: /experience/
+---
+
+<section class="section">
+    <p style="text-align: center; color: var(--token-text-secondary); margin-bottom: 48px; font-size: 16px; margin-top: 48px;">
+        {{ experiencePage.subtitle }}
+    </p>
+    
+    <div class="experience-timeline">
+        {% for job in experiencePage.jobs %}
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <div class="job-info">
+                    <h3 class="job-title">{{ job.title }}</h3>
+                    <div class="company-info">
+                        <span class="company-name">{{ job.company }}</span>
+                        {% if job.companyUrl %}
+                        <a href="{{ job.companyUrl }}" target="_blank" class="company-link">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4.5 19.5L19.5 4.5M19.5 4.5L8.25 4.5M19.5 4.5V15.75"/>
+                            </svg>
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="job-period">{{ job.period }}</div>
+            </div>
+            
+            {% if job.description %}
+            <div class="job-description">
+                {{ job.description | safe }}
+            </div>
+            {% endif %}
+            
+            {% if job.achievements and job.achievements.length > 0 %}
+            <div class="job-achievements">
+                <h4>Key Achievements:</h4>
+                <ul>
+                    {% for achievement in job.achievements %}
+                    <li>{{ achievement.item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+            
+            {% if job.skills and job.skills.length > 0 %}
+            <div class="job-skills">
+                {% for skill in job.skills %}
+                <span class="skill-tag">{{ skill.skill }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</section>

@@ -1,0 +1,38 @@
+{
+  "profileImage": "https://framerusercontent.com/images/rG77FznwlEd68cq4KEVfvykYMw.png",
+  "intro1": "I've led high-performing teams, designed processes from scratch, and shaped product experiences that made life easier for internal teams, businesses and their customers.",
+  "intro2": "In 2023, I co-founded a company called Mira (acquired by Chowdeck), where I served as COO. I was responsible for People, Finance, and Customer Operations, and my mission was simple: build the backbone of the business. That meant setting up the right structure, finding the right tools, and supporting the right people.",
+  "intro3": "At the core of everything I do is this belief:",
+  "beliefStatement": "Customer Success is about creating meaningful human experiences.",
+  "beliefDescription": "Because at the end of the day, every interaction; even the operational ones should feel simple, fast, and valuable for the people behind the business.",
+  "expertiseTitle": "Team Structure & Enablement",
+  "expertiseSubtitle": "People Development · Operational Clarity · Scalable Systems",
+  "personalTitle": "My hobbies and things i like to do",
+  "personalIntro": "My hobbies are almost not existent but I'm trying to change that. Here are few things I like:",
+  "personalItems": [
+    { "item": "Playing dress up and looking good. I wear a wide range of style and colours but my style is comfort chic." },
+    { "item": "I like dancing…my favourite genre of music to dance to is Afro house music and maybe Afrobeat lol" },
+    { "item": "I started learning how to DJ and frankly, i've not gone far lmao.. it's hard hard work." },
+    { "item": "I like taking pictures especially when my husband is taking them.." },
+    { "item": "I like hanging out with my friends" },
+    { "item": "I like listening to podcasts. My faves are Founders by David Senra, ISWIS by Jollz and FK, Loose talk by Osagie, AOT2, Steve dede, DOAC by Steven Bartlett and What now by Trevor Noah." }
+  ],
+  "expertiseAreas": [
+    {
+      "title": "Team Structure & Enablement",
+      "description": "Building high-performing teams through clear structures, defined roles, and empowering processes that drive both individual growth and collective success."
+    },
+    {
+      "title": "Customer Success Operations",
+      "description": "Designing and implementing customer-centric operations that turn every interaction into an opportunity for meaningful engagement and long-term value creation."
+    },
+    {
+      "title": "Process Design & Optimization",
+      "description": "Creating scalable operational frameworks that eliminate friction, improve efficiency, and enable teams to focus on what matters most."
+    },
+    {
+      "title": "Cross-functional Leadership",
+      "description": "Leading initiatives across finance, people operations, and customer success to ensure organizational alignment and sustainable growth."
+    }
+  ]
+}

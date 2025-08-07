@@ -63,6 +63,59 @@ collections:
               - {label: "Description", name: "description", widget: "text"}
               - {label: "URL", name: "url", widget: "string"}
               - {label: "Type", name: "type", widget: "select", options: ["article", "presentation", "podcast", "video", "talk", "project"]}
+      
+      - label: "Homepage Content"
+        name: "homepage"
+        file: "_data/homepage.json"
+        fields:
+          - {label: "Profile Image URL", name: "profileImage", widget: "string"}
+          - {label: "Intro Paragraph 1", name: "intro1", widget: "text"}
+          - {label: "Intro Paragraph 2", name: "intro2", widget: "text"}
+          - {label: "Intro Paragraph 3", name: "intro3", widget: "text"}
+          - {label: "Belief Statement", name: "beliefStatement", widget: "text"}
+          - {label: "Belief Description", name: "beliefDescription", widget: "text"}
+          - {label: "Expertise Title", name: "expertiseTitle", widget: "string"}
+          - {label: "Expertise Subtitle", name: "expertiseSubtitle", widget: "string"}
+          - {label: "Personal Section Title", name: "personalTitle", widget: "string"}
+          - {label: "Personal Intro", name: "personalIntro", widget: "text"}
+          - label: "Personal Items"
+            name: "personalItems"
+            widget: "list"
+            fields:
+              - {label: "Item", name: "item", widget: "text"}
+          - label: "Expertise Areas"
+            name: "expertiseAreas"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+      
+      - label: "Experience Page"
+        name: "experiencePage"
+        file: "_data/experiencePage.json"
+        fields:
+          - {label: "Page Subtitle", name: "subtitle", widget: "text"}
+          - label: "Jobs"
+            name: "jobs"
+            widget: "list"
+            fields:
+              - {label: "Job Title", name: "title", widget: "string"}
+              - {label: "Company", name: "company", widget: "string"}
+              - {label: "Company URL", name: "companyUrl", widget: "string", required: false}
+              - {label: "Period", name: "period", widget: "string"}
+              - {label: "Description", name: "description", widget: "markdown", required: false}
+              - label: "Key Achievements"
+                name: "achievements"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Achievement", name: "item", widget: "text"}
+              - label: "Skills"
+                name: "skills"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Skill", name: "skill", widget: "string"}
   
   - name: "pages"
     label: "Pages"
